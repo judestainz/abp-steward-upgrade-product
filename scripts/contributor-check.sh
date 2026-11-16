@@ -1,5 +1,5 @@
 #!/bin/sh
-# Generated contributor kit v1 (policy sha256:c28ca56b1840e8da48b1a4ae4a7651006a9a0293df2341c40068ba5ca05f743c). Refreshed only by governed upgrade commits; do not edit by hand.
+# Generated contributor kit v1 (policy sha256:93a3f0cad81e2f3f3dcac6de78d4bd1a38dd74b473a04b6987ca8a9ce5c16b3d). Refreshed only by governed upgrade commits; do not edit by hand.
 # Purpose: Contributor setup and local validation, derived from this product's approved collaboration policy, so a teammate and their AI run exactly the checks the station will hold them to.
 # Learning objectives: See why a missing dependency or an unsupported host is reported with its own exit code instead of guessed around, and why a station-only check is printed as not run and never as passed.
 # Responsibilities: Judge the host (doctor), run the declared setup commands once in a clean clone (setup), and run every declared local check while listing the station-only ones (check).

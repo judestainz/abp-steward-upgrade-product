@@ -174,5 +174,5 @@
     "trailerFormat": "Implements-Brief: brief-<issue>@v<version> base=<exact base commit>",
     "titleFormat": "[brief-<issue> v<version>] <summary>"
   },
-  "policyDigest": "sha256:c28ca56b1840e8da48b1a4ae4a7651006a9a0293df2341c40068ba5ca05f743c"
+  "policyDigest": "sha256:93a3f0cad81e2f3f3dcac6de78d4bd1a38dd74b473a04b6987ca8a9ce5c16b3d"
 }
