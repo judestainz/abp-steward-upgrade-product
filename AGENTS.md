@@ -1,6 +1,6 @@
 # AGENTS.md — contributor contract for AI coding agents
 
-<!-- Generated contributor kit v1 (policy sha256:c28ca56b1840e8da48b1a4ae4a7651006a9a0293df2341c40068ba5ca05f743c). Refreshed only by governed upgrade commits; do not edit by hand. -->
+<!-- Generated contributor kit v1 (policy sha256:93a3f0cad81e2f3f3dcac6de78d4bd1a38dd74b473a04b6987ca8a9ce5c16b3d). Refreshed only by governed upgrade commits; do not edit by hand. -->
 
 You are helping a teammate contribute to this product repository. Everything you need is in this repository and in the task brief the teammate gives you; nothing about the build station that integrates this product is available to you or needed.
 

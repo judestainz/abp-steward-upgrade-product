@@ -21,6 +21,19 @@ GitHub issues and pull requests.
 
 `greeting(name)` returns the string `"Hello, <name>!"`.
 
+The parameter is documented as a string, but the module never checks it. `name` is interpolated into a JavaScript template
+literal, so a non-string name is converted to text exactly as a template literal converts it — the same rule as
+`` `${value}` `` anywhere else in JavaScript — and no error is raised:
+
+```js
+greeting(42);        // "Hello, 42!"
+greeting(undefined); // "Hello, undefined!"
+```
+
+So `greeting(42)` returns `"Hello, 42!"`, because the number `42` converts to the text `42`, and `greeting(undefined)` returns
+`"Hello, undefined!"`, because `undefined` converts to the literal text `undefined` rather than to an empty string. Callers who
+want a different reading for a missing name must convert the value themselves before the call.
+
 ## Data or control flow
 
 A caller passes a name to `greeting`, which returns the formatted string. There is no state and no I/O.
@@ -30,7 +43,11 @@ A caller passes a name to `greeting`, which returns the formatted string. There 
 ```js
 import { greeting } from "./packages/product/greeting.mjs";
 console.log(greeting("team")); // Hello, team!
+console.log(greeting(""));     // Hello, !
 ```
+
+An empty name is a normal input, not a mistake: `greeting("")` returns the string `"Hello, !"`, with nothing between the comma-space
+and the exclamation mark.
 
 ## Testing
 
@@ -38,7 +55,8 @@ Run `npm test` from the repository root. The same command runs in CI as the requ
 
 ## Error handling
 
-The module performs no validation; the test fails with an assertion diff if the greeting text changes.
+The module performs no validation, so an empty name is accepted rather than rejected: `greeting("")` throws nothing and returns
+`"Hello, !"`. There is no input that `greeting` refuses. The test fails with an assertion diff if the greeting text changes.
 
 ## Assumptions
 
